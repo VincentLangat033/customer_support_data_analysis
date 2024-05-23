@@ -47,20 +47,40 @@ The dataset consists of customer support tweets collected from Twitter. Each twe
 
 1. Loading the Dataset:
 
-python code snippet
+```bash
 import pandas as pd
-filtered_data = pd.read_csv('customer_support_tweets.csv')
-
+filtered_data = pd.read_csv('data_source\twcs.csv')
+```
 2. Removal of stopwords
+```bash
+STOPWORDS = set(stopwords.words('english'))
+def remove_stopwords(text):       #using function to remove stop words
+    return " ".join([word for word in str(text).split() if word not in STOPWORDS])
+df["processed_text"] = df["processed_text"].apply(lambda text: remove_stopwords(text))
+```
 3. Stemming
-4. Converting Dates:
-python code snippet
-filtered_data['created_at'] = pd.to_datetime(filtered_data['created_at'], errors='coerce')
-5. Handling Missing Values:
+```bash
+stemmer = PorterStemmer()
+def stem_words(text):
+    return " ".join([stemmer.stem(word) for word in text.split()])
 
+df["processed_text"] = df["processed_text"].apply(lambda text: stem_words(text))
+```
+4. Converting Dates:
+```bash
+filtered_data['created_at'] = pd.to_datetime(filtered_data['created_at'], errors='coerce')
+```
+5. Handling Missing Values:
+```bash
+filtered_data = filtered_data.dropna(subset=['created_at'])
+```
 
 6. Filter the data to focus on customer feedback
-7. Feature Extraction:
+```bash
+customer_feedback_keywords = ['customer support', 'help', 'issue', 'complaint', 'query', 'problem']
+filtered_data = df[df['processed_text'].str.contains('|'.join(customer_feedback_keywords), case=False)]
+```
+
 
 
 ## Sentiment Analysis
@@ -69,13 +89,14 @@ filtered_data['created_at'] = pd.to_datetime(filtered_data['created_at'], errors
 Sentiment analysis was performed using the VADER (Valence Aware Dictionary and sEntiment Reasoner) sentiment analysis tool. Each tweet was assigned a sentiment score indicating whether it was positive, negative, or neutral.
 
 Distribution of Sentiment Scores
-
+```bash
 sentiment_counts = filtered_data['sentiment_category'].value_counts()
 sns.barplot(x=sentiment_counts.index, y=sentiment_counts.values)
 plt.title('Sentiment Distribution of Customer Support Tweets')
 plt.xlabel('Sentiment')
 plt.ylabel('Number of Tweets')
 plt.show()
+```
 
 Examples of Tweets
 
