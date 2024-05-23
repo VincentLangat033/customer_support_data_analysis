@@ -10,7 +10,7 @@ The proliferation of social media platforms has transformed the way companies in
 - [Sentiment Analysis](#SentimentAnalysis)
 - [Trend Analysis](#Trend-Analysis)
 - [Holiday Analysis](#Holiday-Analysis)
-- [Additional Analysis](#Additional-Analysis)
+- [Visuals](#Visuals)
 - [Conclusion](#Conclusion)
 - [ Insights and Recommendations](#Insights-and-Recommendations)
 - [Future Work](#FutureWork)
@@ -119,8 +119,19 @@ Based on the prevalent topics discovered from the customer reviews, we provide a
 
 Analysis of Issues During Holidays
 
-## Additional Analysis
+## Visuals
+### Overview of customer support tweets over time
+![customer support tweets over time](images/customer_support_tweets_overtime.png "customer support tweets over time")
 ### Word Cloud Visualization
+![Word Cloud](images/word_cloud.png "Word Cloud")
+
+### Sentiment distribution over the holiday
+![Sentiment distribution over the holiday](images/sentiment%20_over_the_holiday.png "Sentiment distribution over the holiday")
+
+### Weekly average sentiment
+![Weekly average sentiment](images/weekly_average_sentiment.png "Weekly average sentiment")
+
+
 
 ## Conclusion
 ## Summary of Findings
