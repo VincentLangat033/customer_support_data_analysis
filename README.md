@@ -93,6 +93,43 @@ Based on the prevalent topics discovered from the customer reviews, we provide a
 
 Analysis of Issues During Holidays
 
+## Additional Analysis
+### Word Cloud Visualization
+
+## Conclusion
+## Summary of Findings
+
+### Sentiment Analysis: Majority of tweets were neutral, with a significant portion being positive. However pre 2014 majority of tweets were negative
+### Trend Analysis: Identified peak periods and seasonal variations in tweet volumes and sentiments.
+### Holiday Analysis: Increased interactions during holidays with varied sentiments indicating specific customer issues.
+
+## Insights and Recommendations
+- Improve Customer Support: Focus on addressing common issues highlighted in negative tweets.
+- Resource Allocation: Allocate more resources during identified peak periods and holidays.
+
+## Future Work
+### Suggestions for Further Analysis
+
+- Enhanced Sentiment Analysis: Incorporate more sophisticated NLP techniques for better sentiment classification.
+- Customer Segmentation: Analyze tweets based on customer demographics to provide personalized support.
+- Real-Time Analysis: Develop real-time monitoring tools for customer support interactions.
+
+### Potential Areas for Research
+
+- Impact of Support Quality on Customer Retention: Study the long-term impact of support quality on customer loyalty.
+- Comparison Across Platforms: Compare customer support interactions across different social media platforms.
+
+## References
+[Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
+[Seaborn Documentation](https://seaborn.pydata.org/)
+[VADER Sentiment Analysis](https://github.com/cjhutto/vaderSentiment)
+[WordCloud Documentation](https://github.com/amueller/word_cloud)
+
+### Code Snippets
+
+- Data Preprocessing Code
+- Sentiment Analysis Code
+- Visualization Code
 
 ## How to Run the Code
 1. Clone the repository.
